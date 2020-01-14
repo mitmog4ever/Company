@@ -1,0 +1,15 @@
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\BLL.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\BLL.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\Common.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\DAL.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\EntityFramework.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\Common.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\DAL.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\DAL.dll.config
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\EntityFramework.xml
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.pdb
