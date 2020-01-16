@@ -2,3 +2,4 @@ C:\Users\AKRAMFARRAT\source\repos\Company\Common\bin\Debug\Common.dll
 C:\Users\AKRAMFARRAT\source\repos\Company\Common\bin\Debug\Common.pdb
 C:\Users\AKRAMFARRAT\source\repos\Company\Common\obj\Debug\Common.dll
 C:\Users\AKRAMFARRAT\source\repos\Company\Common\obj\Debug\Common.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\Common\obj\Debug\Common.csprojAssemblyReference.cache

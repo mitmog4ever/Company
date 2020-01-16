@@ -13,3 +13,6 @@ C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.csprojAssemblyRefere
 C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.dll
 C:\Users\AKRAMFARRAT\source\repos\Company\BLL\obj\Debug\BLL.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\AutoMapper.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\AutoMapper.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\BLL\bin\Debug\AutoMapper.xml

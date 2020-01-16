@@ -77,3 +77,13 @@ C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\obj\Debug\Compan
 C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\obj\Debug\CompanyWebApplication.csproj.CopyComplete
 C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\obj\Debug\CompanyWebApplication.dll
 C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\obj\Debug\CompanyWebApplication.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\AutoMapper.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\AutoMapper.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\AutoMapper.xml
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\Antlr3.Runtime.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\Newtonsoft.Json.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\System.Web.Optimization.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\WebGrease.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\Antlr3.Runtime.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\Newtonsoft.Json.xml
+C:\Users\AKRAMFARRAT\source\repos\Company\CompanyWebApplication\bin\System.Web.Optimization.xml

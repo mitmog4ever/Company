@@ -21,3 +21,8 @@ C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\obj\Debug\UnitTestComp
 C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\UnitTestCompany.dll.config
 C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\Common.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\AutoMapper.dll
+C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\Common.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\AutoMapper.pdb
+C:\Users\AKRAMFARRAT\source\repos\Company\UnitTestCompany\bin\Debug\AutoMapper.xml

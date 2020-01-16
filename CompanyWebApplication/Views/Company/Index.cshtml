@@ -1,17 +1,47 @@
-﻿
+﻿@model CompanyWebApplication.Models.VMIndex
 @{
-    Layout = null;
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<hr />
+    <div cass="Row">
+        <div class="col-md-6">
+            <h2>Liste des Catégroies</h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th class="col">Id Catégorie</th>
+                        <th class="col">Déscription</th>
 
-<!DOCTYPE html>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.lisCat)
+                    {
+                        <tr>
+                            <th class="row">@Html.DisplayFor(itemX => item.id_cat)</th>
+                            <td>@Html.DisplayFor(itemX => item.description_cat)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            <div>
+                <ul calss="nav nav-pills">
+                    @{
+                        for (int i = 0; i < ViewBag.TotalPages; i++)
+                        {
+                            <li>@Html.ActionLink(""+@i, "Index/"+@i)</li>
+                        }
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
-</head>
-<body>
-    <div> 
+                    }
+
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+        </div>
+
     </div>
-</body>
-</html>
+
+
