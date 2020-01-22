@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CompanyWebApplication.Models
 {
-    public class VMIndex
+    public class VMListeCat
     {
         public List<DtoCategorie> lisCat = new List<DtoCategorie>();
 

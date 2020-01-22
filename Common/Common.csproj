@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DtoModels\DtoCategorie.cs" />
+    <Compile Include="DtoModels\DtoDepartement.cs" />
+    <Compile Include="DtoModels\DtoEmployee.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

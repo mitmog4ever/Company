@@ -1,0 +1,69 @@
+﻿
+@model  CompanyWebApplication.Models.VMListeDeprt
+@{
+    ViewBag.Title = "Liste des Departements";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<h1>@TempData["SuccessMessageDeprt"]</h1>
+<div cass="Row">
+    <div class="col-md-6">
+        <h2>Liste des Departements</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col">Id Departement</th>
+                    <th class="col">Nom</th>
+                    <th class="col">Description</th>
+                    <th class="col">Categorie</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.listDeprt)
+                {
+                <tr>
+                    <th>@Html.DisplayFor(itemX => item.id_dep)</th>
+                    <td>@Html.DisplayFor(itemX => item.nom_dep)</td>
+                    <td>@Html.DisplayFor(itemX => item.description_dep)</td>
+                    <td>@Html.DisplayFor(itemX => item.Categorie)</td>
+               
+                    <td>
+                        <a href="/Company/InsertOrUpdateDeprt/@item.id_dep">Update</a>
+                    </td>
+                    <td>
+                        <a href="/Company/DeleteDeprt/@item.id_dep">Delete</a>
+                    </td>
+                </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            <ul class="list-group list-group-horizontal">
+                @{
+                    string className = "";
+                    int j = 0;
+                    for (int i = 0; i < ViewBag.TotalPages; i++)
+                    {
+                        className = "";
+                        if (ViewBag.CuerrentPage == i) { className = "active"; }
+                        j = i + 1;
+                        <li class="list-group-item @className"><a href="/Company/ListeDeprt/?page=@i&size=5">@j</a></li>
+                    }
+                }
+
+
+
+            </ul>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+
+    </div>
+
+</div>
+
+

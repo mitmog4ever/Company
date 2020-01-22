@@ -1,0 +1,76 @@
+﻿
+@model CompanyWebApplication.Models.VMListeEmp
+@{
+    ViewBag.Title = "Liste des Employee";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<hr />
+<h1>@TempData["SuccessMessageEmp"]</h1>
+<div cass="Row">
+    <div class="col-md-6">
+        <h2>Liste des Employees</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col">Id Employee</th>
+                    <th class="col">Nom</th>
+                    <th class="col">Prénom</th>
+                    <th class="col">Salaire</th>
+                    <th class="col">TelePhone</th>
+                    <th class="col">Date de recrut</th>
+                    <th class="col">Département</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.listEmp)
+                {
+                    <tr>
+                        <th>@Html.DisplayFor(itemX => item.id_emp)</th>
+                        <td>@Html.DisplayFor(itemX => item.nom_emp)</td>
+                        <td>@Html.DisplayFor(itemX => item.prenom_emp)</td>
+                        <td>@Html.DisplayFor(itemX => item.Salaire_emp)</td>
+                        <td>@Html.DisplayFor(itemX => item.tele_emp)</td>
+                        <td>@Html.DisplayFor(itemX => item.date_recrute_emp)</td>
+                        <td>@Html.DisplayFor(itemX => item.deprt)</td>
+                        <td>
+                            <a href="/Company/InsertOrUpdateEmp/@item.id_emp">Update</a>
+                        </td>
+                        <td>
+                            <a href="/Company/DeleteEmp/@item.id_emp">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <div>
+            <ul class="list-group list-group-horizontal">
+                @{
+                    string className = "";
+                    int j = 0;
+                    for (int i = 0; i < ViewBag.TotalPages; i++)
+                    {
+                        className = "";
+                        if (ViewBag.CuerrentPage == i) { className = "active"; }
+                        j = i + 1;
+                        <li class="list-group-item @className"><a href="/Company/ListeEmp/?page=@i&size=5">@j</a></li>
+                    }
+                }
+
+
+
+            </ul>
+
+        </div>
+    </div>
+    <hr />
+    <div class="col-md-6">
+        @Html.ActionLink("Liste des Catégories", "ListeCat", new { @class = "btn btn-primary" })
+    </div>
+    <div class="col-md-6">
+        @Html.ActionLink("Liste des Departements", "ListeDeprt", new { @class = "btn btn-primary" })
+    </div>
+   </div>
+
+
