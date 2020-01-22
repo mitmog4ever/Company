@@ -3,6 +3,7 @@ using Common.DtoModels;
 using DAL;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -61,6 +62,10 @@ namespace BLL
             }
             ).ToList();
             return listDto;
+        }
+        public void deleteEmployee(int id)
+        {
+            context.Database.ExecuteSqlCommand("delete * from Employee where id_emp = @id", new SqlParameter("@id" , id));
         }
     }
 }

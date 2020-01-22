@@ -11,3 +11,16 @@ C:\Users\AKRAMFARRAT\source\repos\Company\DAL\obj\Debug\DAL.csprojAssemblyRefere
 C:\Users\AKRAMFARRAT\source\repos\Company\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\AKRAMFARRAT\source\repos\Company\DAL\obj\Debug\DAL.dll
 C:\Users\AKRAMFARRAT\source\repos\Company\DAL\obj\Debug\DAL.pdb
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\DAL.dll.config
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\DAL.dll
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\DAL.pdb
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\Common.dll
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\Common.pdb
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Asus\source\repos\Company\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Asus\source\repos\Company\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Asus\source\repos\Company\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Asus\source\repos\Company\DAL\obj\Debug\DAL.dll
+C:\Users\Asus\source\repos\Company\DAL\obj\Debug\DAL.pdb

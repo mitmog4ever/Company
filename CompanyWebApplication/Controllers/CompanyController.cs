@@ -40,5 +40,12 @@ namespace CompanyWebApplication.Controllers
             ViewBag.TotalPages = BusComp.totalEmp / size;
             return View(vmListDeprt);
         }
+        public ActionResult DeleteEmp(int id)
+        {
+            BusComp.deleteEmployee(id);
+            TempData["SuccessMessageEmp"] = "Done";
+            return RedirectToAction("ListeEmp");
+        }
+        
     }
 }

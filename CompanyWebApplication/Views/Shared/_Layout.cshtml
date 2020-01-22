@@ -50,7 +50,7 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
             <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                 <li class="nav-item active">
-                    <a class="nav-link" href="/Company/Index">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="/Company/ListeEmp">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
@@ -88,5 +88,18 @@
     <script src="~/Scripts/jquery-3.3.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+
+            // DOM is loaded by now...
+            $(".linkDelete").click(function () {
+                if (!confirm("Sûr ?")) {
+                    e.preventDefault();
+                }
+            });
+   
+
+        });
+    </script>
 </body>
 </html>
