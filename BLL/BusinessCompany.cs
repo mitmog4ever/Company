@@ -14,11 +14,19 @@ namespace BLL
     {
         public int totalCat = 0;
         public int totalEmp = 0;
-        public List<DtoCategorie> GetListeCategorieDto(int page=0 , int size = 5)
+        public int totalDeprt = 0;
+        public List<DtoCategorie> GetListeCategorieDto(int page=0 , int size = 5, bool retAll = false)
         {
-            
             totalCat = context.Categories.Count();
-            var list = context.Categories.OrderBy(item => item.id_cat).Skip(page*size).Take(size).ToList();
+            var list = new List<Categorie>();
+            if (retAll)
+            {
+                list =  context.Categories.OrderBy(item => item.id_cat).ToList();
+            }else
+            {
+                list = context.Categories.OrderBy(item => item.id_cat).Skip(page * size).Take(size).ToList();
+            }
+
             var listDto = AutoMapperConfig.mapper.Map<List<DtoCategorie>>(list);
             return listDto;
         }
@@ -53,7 +61,7 @@ namespace BLL
         public List<DtoDepartement> GetListeDepartement(int page = 0,int size = 5)
         {
             var list = context.Departements.OrderBy(item => item.nom_dep).Skip(page * size).Take(size).ToList();
-            totalCat = context.Departements.Count();
+            totalDeprt = context.Departements.Count();
             var listDto = list.Select(x => new DtoDepartement {
                 id_dep = x.id_dep,
                 nom_dep = x.nom_dep,
@@ -66,6 +74,33 @@ namespace BLL
         public void deleteEmployee(int id)
         {
             context.Database.ExecuteSqlCommand("delete * from Employee where id_emp = @id", new SqlParameter("@id" , id));
+        }
+        public void AjouterDepartement(DtoDepartement deprt)
+        {
+            Departement dep = new Departement
+            {
+                
+                nom_dep = deprt.nom_dep,
+                description_dep = deprt.description_dep,
+                Date_creat = deprt.Date_creat,
+                id_cat = deprt.id_cat
+            };
+            Ajouter(dep);
+           
+        }
+        public void ModifierDepartement(DtoDepartement deprt)
+        {
+
+            Departement deprtUp = context.Departements.Find(deprt.id_dep);
+            deprtUp = new Departement
+            {
+
+                nom_dep = deprt.nom_dep,
+                description_dep = deprt.description_dep,
+                Date_creat = deprt.Date_creat,
+                id_cat = deprt.id_cat
+            };
+            context.SaveChanges();
         }
     }
 }

@@ -7,8 +7,10 @@
 
 <hr />
 <h1>@TempData["SuccessMessageDeprt"]</h1>
+
 <div cass="Row">
     <div class="col-md-6">
+        @Html.ActionLink("Ajouter Departement", "RedirectToAjouterOrModifierDeprt", null, new { @class = " btn btn-primary" })
         <h2>Liste des Departements</h2>
         <table class="table table-striped">
             <thead>
@@ -24,19 +26,19 @@
             <tbody>
                 @foreach (var item in Model.listDeprt)
                 {
-                <tr>
-                    <th>@Html.DisplayFor(itemX => item.id_dep)</th>
-                    <td>@Html.DisplayFor(itemX => item.nom_dep)</td>
-                    <td>@Html.DisplayFor(itemX => item.description_dep)</td>
-                    <td>@Html.DisplayFor(itemX => item.Categorie)</td>
-               
-                    <td>
-                        <a href="/Company/InsertOrUpdateDeprt/@item.id_dep">Update</a>
-                    </td>
-                    <td>
-                        <a href="/Company/DeleteDeprt/@item.id_dep">Delete</a>
-                    </td>
-                </tr>
+                    <tr>
+                        <th>@Html.DisplayFor(itemX => item.id_dep)</th>
+                        <td>@Html.DisplayFor(itemX => item.nom_dep)</td>
+                        <td>@Html.DisplayFor(itemX => item.description_dep)</td>
+                        <td>@Html.DisplayFor(itemX => item.Categorie)</td>
+
+                        <td>
+                            <a href="/Company/RedirectToAjouterOrModifierDeprt/@item.id_dep">Update</a>
+                        </td>
+                        <td>
+                            <a href="/Company/DeleteDeprt/@item.id_dep">Delete</a>
+                        </td>
+                    </tr>
                 }
             </tbody>
         </table>
