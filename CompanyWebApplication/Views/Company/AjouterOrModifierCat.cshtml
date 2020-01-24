@@ -1,0 +1,39 @@
+﻿@model CompanyWebApplication.Models.VMListeCat
+@{
+    ViewBag.Title = "AjouterOrModifierCat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AjouterOrModifierCat</h2>
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("AjouterOrModifierCat","Company", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.id_cat)
+            <div class="form-group">
+                @Html.LabelFor(model => model.description_cat)
+                @Html.TextBoxFor(model => model.description_cat, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.description_cat)
+            </div>
+      
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @{
+                        if (Model.id_cat != 0)
+                        {
+                            <input type="submit" value="Update" class="btn btn-success" />
+                        }
+                        else
+                        {
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        }
+                    }
+
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+</div>

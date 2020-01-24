@@ -173,6 +173,8 @@
     <Content Include="Views\Company\ListeEmp.cshtml" />
     <Content Include="Views\Company\ListeDeprt.cshtml" />
     <Content Include="Views\Company\AjouterOrModifierDeprt.cshtml" />
+    <Content Include="Views\Company\AjouterOrModifierCat.cshtml" />
+    <Content Include="Views\Company\AjouterOrModifierEmp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -1,0 +1,64 @@
+﻿@model CompanyWebApplication.Models.VMListeEmp
+@{
+    ViewBag.Title = "AjouterOrModifierEmp";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AjouterOrModifierEmp</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        @using (Html.BeginForm("AjouterOrModifierEmp", "Company", FormMethod.Post))
+        {
+            @Html.HiddenFor(model => model.id_emp)
+            <div class="form-group">
+                @Html.LabelFor(model => model.nom_emp)
+                @Html.TextBoxFor(model => model.prenom_emp, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.prenom_emp)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.prenom_emp)
+                @Html.TextBoxFor(model => model.prenom_emp, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.prenom_emp)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.Salaire_emp)
+                @Html.TextBoxFor(model => model.Salaire_emp, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Salaire_emp)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.tele_emp)
+                @Html.TextBoxFor(model => model.tele_emp, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.tele_emp)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.date_recrute_emp)
+                @Html.TextBoxFor(model => model.date_recrute_emp, new { @class = "form-control", @type = "Date" })
+                @Html.ValidationMessageFor(model => model.date_recrute_emp)
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.id_dep)
+                @Html.DropDownListFor(model => model.id_dep,new SelectList(Model.listDeprt,"id_dep","nom_dep") ,new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.id_dep)
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    @{
+                        if (Model.id_emp != 0)
+                        {
+                            <input type="submit" value="Update" class="btn btn-success" />
+                        }
+                        else
+                        {
+                            <input type="submit" value="Save" class="btn btn-primary" />
+                        }
+                    }
+
+                </div>
+            </div>
+
+        }
+
+
+    </div>
+</div>

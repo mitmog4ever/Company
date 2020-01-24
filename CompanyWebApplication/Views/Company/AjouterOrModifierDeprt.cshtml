@@ -13,7 +13,7 @@
             @Html.HiddenFor(model => model.id_dep)
             <div class="form-group">
                 @Html.LabelFor(model => model.nom_dep)
-                @Html.TextBoxFor(model => model.nom_dep, "Nom", new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.nom_dep, new { @class = "form-control" })
                 @Html.ValidationMessageFor(model => model.nom_dep)
             </div>
             <div class="form-group">
@@ -23,7 +23,7 @@
             </div>
             <div class="form-group">
                 @Html.LabelFor(model => model.Date_creat)
-                @Html.TextBoxFor(model => model.Date_creat, "Date de Création", new { @class = "form-control" })
+                @Html.TextBoxFor(model => model.Date_creat, new { @class = "form-control", @type ="Date" })
                 @Html.ValidationMessageFor(model => model.Date_creat)
             </div>
             <div class="form-group">
@@ -34,7 +34,7 @@
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">
                     @{
-                        if(Model.id_cat != 0 ){
+                        if(Model.id_dep != 0 ){
                             <input type="submit" value="Update" class="btn btn-success" />
                         }
                         else
