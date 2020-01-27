@@ -4,10 +4,11 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <hr />
-<h1>@TempData["SuccessMessageCat"]</h1>
-@Html.ActionLink("Ajouter Categorie", "RedirectToAjouterOrModifierCat", new { @id=0}, new { @class = "btn btn-primary" })
+<h3>@TempData["SuccessMessageCat"]</h3>
+
 <div cass="Row">
     <div class="col-md-6">
+        @Html.ActionLink("Ajouter Categorie", "RedirectToAjouterOrModifierCat", new { @id = 0 }, new { @class = "btn btn-outline-success my-2 my-sm-0" })
         <h2>Liste des Catégroies</h2>
         <table class="table table-striped">
             <thead>

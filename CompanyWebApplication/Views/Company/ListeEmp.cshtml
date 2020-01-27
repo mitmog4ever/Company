@@ -2,14 +2,15 @@
 @model CompanyWebApplication.Models.VMListeEmp
 @{
     ViewBag.Title = "Liste des Employee";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Layout_Emp.cshtml";
 }
 
 <hr />
-<h1>@TempData["SuccessMessageEmp"]</h1>
-@Html.ActionLink("Ajouter Employer","RedirectToAjouterOrModifierEmp",new { @id=0},new { @class = "btn btn-primary" })
+<h3>@TempData["SuccessMessageEmp"]</h3>
+
 <div cass="Row">
     <div class="col-md-6">
+        @Html.ActionLink("Ajouter Employer", "RedirectToAjouterOrModifierEmp", new { @id = 0 }, new { @class = "btn btn-outline-success my-2 my-sm-0" })
         <h2>Liste des Employees</h2>
         <table class="table table-striped">
             <thead>
@@ -67,7 +68,8 @@
     </div>
     <hr />
     <div class="col-md-6">
-        @Html.ActionLink("Liste des Catégories", "ListeCat", null, new { @class = "btn btn-primary" })  @Html.ActionLink("Liste des Departements", "ListeDeprt", null, new { @class = "btn btn-primary", @role = "button" })
+        @Html.ActionLink("Liste des Catégories", "ListeCat", null, new { @class = "btn btn-outline-success my-2 my-sm-0" })  @Html.ActionLink("Liste des Departements", "ListeDeprt", null, new { @class = "btn btn-outline-success my-2 my-sm-0", @role = "button" })
+        @*<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>*@
     </div>
 
    </div>

@@ -6,6 +6,7 @@
     <title>@ViewBag.Title - Company Application</title>
     @*@Styles.Render("~/Content/css")*@
     @*@Scripts.Render("~/bundles/modernizr")*@
+    @model CompanyWebApplication.Models.VMListeEmp
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <style>
@@ -19,25 +20,24 @@
         }
         /* unvisited link */
         a:link {
-          color: black;
+            color: black;
         }
-        
+
         /* visited link */
         a:visited {
-          color: black;
+            color: black;
         }
-        
+
         /* mouse over link */
         a:hover {
-          color: darkred;
+            color: darkred;
         }
-        
+
         /* selected link */
         a:active {
-          color: white;
-          background-color: blue;
+            color: white;
+            background-color: blue;
         }
-        
     </style>
 </head>
 <body>
@@ -66,8 +66,10 @@
                     </div>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0" >
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" name="">
+            <form class="form-inline my-2 my-lg-0" method="get" action="/Company/ListeEmp">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" name="keyWord" value="@Model.keyWord">
+                @Html.ValidationMessageFor(x=>x.keyWord)
+                @Html.DropDownListFor(x=>x.id_dep,new SelectList(Model.listDeprt,"id_dep","nom_dep"),new {@class="form-control" })
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
         </div>
@@ -97,7 +99,7 @@
                     e.preventDefault();
                 }
             });
-   
+
 
         });
     </script>

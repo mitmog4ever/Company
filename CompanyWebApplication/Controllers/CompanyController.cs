@@ -21,15 +21,49 @@ namespace CompanyWebApplication.Controllers
             ViewBag.TotalPages = BusComp.totalCat / size;
             return View(vmListCat);
         }
-        public ActionResult ListeEmp(int page = 0, int size = 5)
-        {
-            VMListeEmp vmListEmp = new VMListeEmp {
-                listEmp = BusComp.GetListeEmployee("", page, size),
-                keyWord = ""                
-            };
+        public ActionResult ListeEmp(VMListeEmp emp, int page = 0, int size = 5)
+        {   if (!String.IsNullOrWhiteSpace(emp.keyWord)){
+                
+                emp.listEmp = BusComp.GetListeEmployee(emp.keyWord, emp.id_dep, page, size);
+                emp.listDeprt = BusComp.GetListeDepartement(0, 0, true);
+                DtoDepartement defaultDep = new DtoDepartement
+                {
+                    id_dep = 0,
+                    nom_dep = " ",
+                    id_cat = 0
+                };
+
+                var value01 = emp.listDeprt.First();
+                emp.listDeprt[0] = defaultDep;
+                emp.listDeprt.Add(value01);
+                emp.keyWord = "";
+            }
+            else
+            {
+                if(emp.id_dep ==0)
+                    emp.listEmp = BusComp.GetListeEmployee("", 0, page, size);
+                else
+                    emp.listEmp = BusComp.GetListeEmployee("", emp.id_dep, page, size);
+                emp.listDeprt = BusComp.GetListeDepartement(0, 0, true);
+                DtoDepartement defaultDep = new DtoDepartement
+                {
+                    id_dep = 0,
+                    nom_dep = " ",
+                    id_cat = 0
+                };
+
+                var value01 = emp.listDeprt.First();
+                emp.listDeprt[0] = defaultDep;
+                emp.listDeprt.Add(value01);
+                emp.keyWord = "";
+            }
+
             ViewBag.CuerrentPage = page;
-            ViewBag.TotalPages = BusComp.totalEmp / size;
-            return View(vmListEmp);
+            if (BusComp.totalEmp % size != 0)
+                ViewBag.TotalPages = 1 + (BusComp.totalEmp / size);
+            else
+                ViewBag.TotalPages = (BusComp.totalEmp / size);
+            return View(emp);
         }
         public ActionResult ListeDeprt(int page = 0, int size = 5)
         {

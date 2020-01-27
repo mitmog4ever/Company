@@ -175,6 +175,7 @@
     <Content Include="Views\Company\AjouterOrModifierDeprt.cshtml" />
     <Content Include="Views\Company\AjouterOrModifierCat.cshtml" />
     <Content Include="Views\Company\AjouterOrModifierEmp.cshtml" />
+    <Content Include="Views\Shared\_Layout_Emp.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

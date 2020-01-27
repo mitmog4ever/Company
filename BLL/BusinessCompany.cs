@@ -31,18 +31,33 @@ namespace BLL
             return listDto;
         }
 
-        public List<DtoEmployee> GetListeEmployee(string KeyWord, int page = 0,int size = 5)
+        public List<DtoEmployee> GetListeEmployee(string KeyWord, int id_dep = 0,int page = 0,int size = 5)
         {
             var list = new List<Employee>();
-            totalCat = context.Employees.Count();
+            totalEmp = context.Employees.Count();
             if (!String.IsNullOrWhiteSpace(KeyWord))
             {
-                list = context.Employees.Where(x => x.nom_emp.ToLower().Contains(KeyWord.ToLower()) || x.prenom_emp.ToLower().Contains(KeyWord.ToLower())).
+                if(id_dep == 0)
+                {
+                    list = context.Employees.Where(x => x.nom_emp.ToLower().Contains(KeyWord.ToLower()) || x.prenom_emp.ToLower().Contains(KeyWord.ToLower())).
                         OrderBy(item => item.id_emp).Skip(page * size).Take(size).ToList();
+                }
+                else
+                {
+                    list = context.Employees.Where(x => x.id_dep == id_dep && (x.nom_emp.ToLower().Contains(KeyWord.ToLower()) || x.prenom_emp.ToLower().Contains(KeyWord.ToLower()))).
+                        OrderBy(item => item.id_emp).Skip(page * size).Take(size).ToList();
+                }
+                
             }
             else
             {
-                list = context.Employees.OrderBy(item => item.id_emp).Skip(page * size).Take(size).ToList();
+                if (id_dep == 0)
+
+                    list = context.Employees.OrderBy(item => item.id_emp).Skip(page * size).Take(size).ToList();
+                else
+                    list = context.Employees.Where(x => x.id_dep == id_dep).
+                        OrderBy(item => item.id_emp).Skip(page * size).Take(size).ToList();
+
 
             }
             var listDto = list.Select(x => new DtoEmployee { 
@@ -126,7 +141,7 @@ namespace BLL
         }
         public void deleteEmployee(int id)
         {
-            context.Database.ExecuteSqlCommand("delete from Employee where id_emp = @id", new SqlParameter("@id" , id));
+            context.Database.ExecuteSqlCommand("delete from Employees where id_emp = @id", new SqlParameter("@id" , id));
         }
         public void deleteDepartement(int id)
         {
